@@ -6,12 +6,14 @@ using devboost.dronedelivery.felipe.DTO;
 using devboost.dronedelivery.felipe.EF.Entities;
 using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace devboost.dronedelivery.felipe.Controllers
 {
     /// <summary>
     /// Controller com operações referentes aos drones
     /// </summary>
+    [Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class DronesController : ControllerBase

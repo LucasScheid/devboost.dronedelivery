@@ -16,6 +16,11 @@ using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Facade;
 using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.DTO.Repositories;
+using devboost.dronedelivery.felipe.EF.Entities;
+using Microsoft.AspNetCore.Identity;
+using devboost.dronedelivery.felipe.Security;
+using Microsoft.Extensions.Options;
+using devboost.dronedelivery.felipe.Security.Extensions;
 
 namespace devboost.dronedelivery.felipe
 {
@@ -35,8 +40,6 @@ namespace devboost.dronedelivery.felipe
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-
             services.AddSingleton<IDroneRepository, DroneRepository>();
             services.AddSingleton<IPedidoDroneRepository, PedidoDroneRepository>();
             services.AddSingleton<IPedidoService, PedidoService>();
@@ -44,6 +47,39 @@ namespace devboost.dronedelivery.felipe
             services.AddSingleton<ICoordinateService, CoordinateService>();
             services.AddSingleton<IPedidoFacade, PedidoFacade>();
             services.AddSingleton<IDroneFacade, DroneFacade>();
+
+            // Configurando o uso da classe de contexto para
+            // acesso às tabelas do ASP.NET Identity Core
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseInMemoryDatabase("InMemoryDatabase"));
+
+            // Ativando a utilização do ASP.NET Identity, a fim de
+            // permitir a recuperação de seus objetos via injeção de
+            // dependências
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            // Configurando a dependência para a classe de validação
+            // de credenciais e geração de tokens
+            services.AddScoped<AccessManager>();
+
+            var signingConfigurations = new SigningConfigurations();
+            services.AddSingleton(signingConfigurations);
+
+            var tokenConfigurations = new TokenConfigurations();
+            new ConfigureFromConfigurationOptions<TokenConfigurations>(
+                Configuration.GetSection("TokenConfigurations"))
+                    .Configure(tokenConfigurations);
+            services.AddSingleton(tokenConfigurations);
+
+            // Aciona a extensão que irá configurar o uso de
+            // autenticação e autorização via tokens
+            services.AddJwtSecurity(
+                signingConfigurations, tokenConfigurations);
+
+            services.AddCors();
+            services.AddControllers();
 
             services.AddDbContext<DataContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString(ProjectConsts.CONNECTION_STRING_CONFIG)), ServiceLifetime.Singleton);
@@ -64,12 +100,21 @@ namespace devboost.dronedelivery.felipe
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+            ApplicationDbContext context,
+            UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Criação de estruturas, usuários e permissões
+            // na base do ASP.NET Identity Core (caso ainda não
+            // existam)
+            new IdentityInitializer(context, userManager, roleManager).Initialize();
+
             // Swagger
             app.UseSwagger()
                .UseSwaggerUI(c =>
