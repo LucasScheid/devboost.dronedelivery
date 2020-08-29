@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.feli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.felipe.EF", "Infra\devboost.dronedelivery.felipe.EF.csproj", "{627639E0-7425-47B3-9373-E92F303A57C3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.felipe.Services", "devboost.dronedelivery.felipe.Services\devboost.dronedelivery.felipe.Services.csproj", "{813D3E13-5073-4F61-912B-F74F4E399DFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.felipe.Services", "Services\Services\devboost.dronedelivery.felipe.Services.csproj", "{813D3E13-5073-4F61-912B-F74F4E399DFD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.felipe.DTO", "Domain\DTO\devboost.dronedelivery.felipe.DTO.csproj", "{F7D1EF8D-7EC3-415E-BCB2-6CECC3F396D6}"
 EndProject
@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.felipe.Security", "devboost.dronedelivery.felipe.Security\devboost.dronedelivery.felipe.Security.csproj", "{9B229655-E8C0-4225-976D-25FAD1A4AFF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.felipe.Security", "Services\Security\devboost.dronedelivery.felipe.Security.csproj", "{9B229655-E8C0-4225-976D-25FAD1A4AFF6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{B0C06033-A52B-4C72-AE51-952D7285AD20}"
 EndProject
