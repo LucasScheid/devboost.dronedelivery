@@ -14,4 +14,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\DTO\devboost.dronedelivery.felipe.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

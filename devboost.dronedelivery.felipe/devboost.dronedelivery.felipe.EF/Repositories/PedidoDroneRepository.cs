@@ -1,9 +1,10 @@
 ﻿using Dapper;
+using devboost.dronedelivery.felipe.DTO;
 using devboost.dronedelivery.felipe.DTO.Enums;
 using devboost.dronedelivery.felipe.DTO.Extensions;
-using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
+using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Entities;
+using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,7 +14,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.felipe.DTO.Repositories
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public class PedidoDroneRepository : RepositoryBase, IPedidoDroneRepository
     {

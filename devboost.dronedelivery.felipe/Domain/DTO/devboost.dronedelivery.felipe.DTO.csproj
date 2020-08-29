@@ -7,10 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.35" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\devboost.dronedelivery.felipe.EF\devboost.dronedelivery.felipe.EF.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
 using devboost.dronedelivery.felipe.EF.Data;
 using Microsoft.Extensions.Configuration;
 
-namespace devboost.dronedelivery.felipe.DTO.Repositories
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public abstract class RepositoryBase
     {

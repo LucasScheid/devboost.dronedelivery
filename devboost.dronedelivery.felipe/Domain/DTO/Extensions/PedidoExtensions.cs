@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.EF.Entities;
-using System;
-using System.Collections.Generic;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
 
 namespace devboost.dronedelivery.felipe.DTO.Extensions
 {

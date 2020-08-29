@@ -1,6 +1,6 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Enums;
+using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Entities;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;

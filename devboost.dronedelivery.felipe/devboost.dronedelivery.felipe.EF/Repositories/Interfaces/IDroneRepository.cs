@@ -1,8 +1,9 @@
-﻿using devboost.dronedelivery.felipe.EF.Entities;
+﻿using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.felipe.DTO.Repositories.Interfaces
+namespace devboost.dronedelivery.felipe.EF.Repositories.Interfaces
 {
     public interface IDroneRepository
     {

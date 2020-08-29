@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.felipe.EF.Entities;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
 using System;
 
 namespace devboost.dronedelivery.felipe.DTO.Extensions

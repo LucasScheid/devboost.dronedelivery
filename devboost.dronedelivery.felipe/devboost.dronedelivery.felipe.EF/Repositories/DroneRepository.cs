@@ -1,17 +1,18 @@
-﻿using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
+﻿using Dapper;
+using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Constants;
+using devboost.dronedelivery.felipe.DTO.Enums;
+using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
-using Microsoft.Data.SqlClient;
+using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using devboost.dronedelivery.felipe.DTO.Constants;
-using System.Linq;
-using devboost.dronedelivery.felipe.EF.Entities;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using Dapper;
 
-namespace devboost.dronedelivery.felipe.DTO.Repositories
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public class DroneRepository : IDroneRepository
     {

@@ -1,12 +1,12 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using devboost.dronedelivery.felipe.Services.Interfaces;
-using devboost.dronedelivery.felipe.EF.Entities;
-using System.Collections.Generic;
-using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
-using devboost.dronedelivery.felipe.DTO;
+﻿using devboost.dronedelivery.felipe.DTO;
 using devboost.dronedelivery.felipe.DTO.Enums;
 using devboost.dronedelivery.felipe.DTO.Extensions;
+using devboost.dronedelivery.felipe.DTO.Models;
+using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+using devboost.dronedelivery.felipe.Services.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Services
 {

@@ -1,10 +1,10 @@
-﻿using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Entities;
+using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.felipe.DTO.Repositories
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public class PedidoRepository : RepositoryBase, IPedidoRepository
     {

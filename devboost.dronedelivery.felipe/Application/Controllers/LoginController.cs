@@ -1,11 +1,7 @@
-﻿using devboost.dronedelivery.felipe.EF.Entities;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Controllers
 {
@@ -22,7 +18,7 @@ namespace devboost.dronedelivery.felipe.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]        
+        [HttpPost]
         public object Post([FromBody] User usuario, [FromServices] AccessManager accessManager)
         {
             if (accessManager.ValidateCredentials(usuario))

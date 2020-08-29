@@ -1,6 +1,6 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
-using devboost.dronedelivery.felipe.EF.Entities;
+using devboost.dronedelivery.felipe.DTO.Models;
+using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -52,6 +52,6 @@ namespace devboost.dronedelivery.felipe.Controllers
             return CreatedAtAction("GetPedido", new { id = pedido.Id }, pedido);
         }
 
-        
+
     }
 }

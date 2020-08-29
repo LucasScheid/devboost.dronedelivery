@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Models;
+using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Facade.Interface;
-using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.EF.Entities;
-using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Controllers
 {

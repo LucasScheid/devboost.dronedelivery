@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.felipe.EF.Entities;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.IO;
@@ -7,7 +7,7 @@ namespace devboost.dronedelivery.felipe.EF.Data
 {
     public class DataContext : DbContext
     {
-        public DataContext (DbContextOptions<DataContext> options)
+        public DataContext(DbContextOptions<DataContext> options)
             : base(options)
         {
         }

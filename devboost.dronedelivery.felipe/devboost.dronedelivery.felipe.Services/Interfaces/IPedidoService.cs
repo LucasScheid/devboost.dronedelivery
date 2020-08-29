@@ -1,5 +1,5 @@
 ﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.EF.Entities;
+using devboost.dronedelivery.felipe.DTO.Models;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Services.Interfaces

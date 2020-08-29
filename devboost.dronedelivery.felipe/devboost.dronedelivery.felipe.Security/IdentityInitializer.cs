@@ -1,8 +1,9 @@
-﻿using System;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
 using Microsoft.AspNetCore.Identity;
+using System;
 
-namespace devboost.dronedelivery.felipe.EF.Entities
+namespace devboost.dronedelivery.felipe.Security
 {
     public class IdentityInitializer
     {
