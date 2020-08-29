@@ -11,16 +11,16 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.IO;
 using System;
-using devboost.dronedelivery.felipe.DTO.Constants;
-using devboost.dronedelivery.felipe.Facade.Interface;
-using devboost.dronedelivery.felipe.Facade;
-using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
-using devboost.dronedelivery.felipe.DTO.Repositories;
 using devboost.dronedelivery.felipe.EF.Entities;
 using Microsoft.AspNetCore.Identity;
 using devboost.dronedelivery.felipe.Security;
 using Microsoft.Extensions.Options;
 using devboost.dronedelivery.felipe.Security.Extensions;
+using devboost.dronedelivery.felipe.DTO.Repositories.Interfaces;
+using devboost.dronedelivery.felipe.DTO.Repositories;
+using devboost.dronedelivery.felipe.Facade.Interface;
+using devboost.dronedelivery.felipe.Facade;
+using devboost.dronedelivery.felipe.DTO.Constants;
 
 namespace devboost.dronedelivery.felipe
 {

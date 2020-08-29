@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\devboost.dronedelivery.felipe.EF\devboost.dronedelivery.felipe.EF.csproj" />
+    <ProjectReference Include="..\..\devboost.dronedelivery.felipe.EF\devboost.dronedelivery.felipe.EF.csproj" />
   </ItemGroup>
 
 </Project>
