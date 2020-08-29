@@ -28,10 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\devboost.dronedelivery.felipe.Security\devboost.dronedelivery.felipe.Security.csproj" />
     <ProjectReference Include="..\Domain\DTO\devboost.dronedelivery.felipe.DTO.csproj" />
     <ProjectReference Include="..\Domain\Facade\devboost.dronedelivery.felipe.Facade.csproj" />
     <ProjectReference Include="..\Infra\devboost.dronedelivery.felipe.EF.csproj" />
+    <ProjectReference Include="..\Services\Security\devboost.dronedelivery.felipe.Security.csproj" />
   </ItemGroup>
 
 
