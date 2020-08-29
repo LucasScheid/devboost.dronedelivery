@@ -2,6 +2,7 @@
 using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Facade.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace devboost.dronedelivery.felipe.Controllers
     /// <summary>
     /// Controller com as operações dos pedidos
     /// </summary>
+    [Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class PedidosController : ControllerBase
